@@ -215,7 +215,7 @@ header {
       outline: none; }
     .owl-carousel .owl-nav .owl-prev span:before,
     .owl-carousel .owl-nav .owl-next span:before {
-      font-size: 80px; }
+      font-size: 40px; }
   .owl-carousel .owl-nav .owl-prev {
     left: 30px !important; }
   .owl-carousel .owl-nav .owl-next {
