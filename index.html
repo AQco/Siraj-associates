@@ -1,151 +1,454 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <title>Siraj Associates</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <title>Siraj Associates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="css/jquery.timepicker.css">
-  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700" rel="stylesheet">
 
-  <style>
-    body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
-      font-family: 'Roboto', sans-serif;
-    }
-    .text-block {
-      font-size: 16px; /* Adjust the font size as needed */
-      line-height: 1.6; /* Adjust the line height as needed */
-    }
-    .central-text {
-      text-align: center;
-      margin: 40px 0; /* Adjust the margin as needed */
-    }
-    .intro-text {
-      text-align: center;
-      margin: 20px 0; /* Adjust the margin as needed */
-      font-style: italic;
-      font-weight: bold;
-    }
-  </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      // Fetch the header HTML file
       fetch('header.html')
-        .then(response => response.text())
-        .then(headerHtml => {
-          const headerContainer = document.getElementById('headerContainer');
-          headerContainer.innerHTML = headerHtml;
-        });
+              .then(response => response.text())
+              .then(headerHtml => {
+                // Inject the header HTML into the header container
+                const headerContainer = document.getElementById('headerContainer');
+                headerContainer.innerHTML = headerHtml;
+              });
 
+      // Fetch the footer HTML file
       fetch('footer.html')
-        .then(response => response.text())
-        .then(footerHtml => {
-          const footerContainer = document.getElementById('footerContainer');
-          footerContainer.innerHTML = footerHtml;
-        });
-    });
-  </script>
-</head>
-<body>
+              .then(response => response.text())
+              .then(footerHtml => {
+                // Inject the footer HTML into the footer container
+                const footerContainer = document.getElementById('footerContainer');
+                footerContainer.innerHTML = footerHtml;
+              });
+    </script>
 
-<header id="headerContainer"></header>
+  </head>
+  <body>
 
-<section class="inner-page">
-  <div class="slider-item py-5" style="background-image: url('img/slider-2.jpg');">
-    <div class="container">
-      <div class="row slider-text align-items-center justify-content-center text-center">
-        <div class="col-md-7 col-sm-12 element-animate">
-          <h1 class="text-white">About Us</h1>
+  <header id="headerContainer"></header>
+
+    <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('img/slider-2.jpg');">
+
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center text-center">
+            <div class="col-md-7 col-sm-12 element-animate">
+              <h1 class="mb-4"> Fastest-Growing Construction Company</h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="slider-item" style="background-image: url('img/slider-1.jpg');">
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center text-center">
+            <div class="col-md-8 col-sm-12 element-animate">
+              <h1 class="mb-4">We Are Leading The Way Construction Works</h1>
+              <p class="mb-0"><a href="#" target="_blank" class="btn btn-primary">Get Started</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- END slider -->
+
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 pr-lg-5 mb-5 mb-md-0  element-animate">
+            <div class="pr-lg-5">
+              <h2 class="text-uppercase heading border-bottom mb-4 text-left">About Us</h2>
+              <p>
+                Welcome to Siraj Associates, a premier construction and contracting firm headquartered in Kochi. Our commitment to excellence shines through our comprehensive range of services, which encompass civil construction, technical consultancy, project management, and interior and landscaping works. Led by the esteemed Mr. Mohammed Siraj, a highly experienced chartered civil engineer, Siraj Associates brings over three decades of expertise to the industry.
+              </p>
+              <p class="mb-0"><a href="about.html" class="btn btn-primary">Read More</a></p>
+            </div>
+          </div>
+          <div class="col-md-6  element-animate">
+            <img src="img/work_thumb_1.jpg" alt="" class="img-fluid">
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section">
-  <div class="container">
-    <div class="intro-text">
-      <p>We are a construction and contracting firm based in Kochi. We deliver services and solutions in civil construction, technical consultancy, project management, and interior & landscaping.</p>
-    </div>
-    <div class="row mb-5">
-      <div class="col-md-6 order-lg-1">
-        <div class="text-block">
-          <h2 class="text-uppercase heading mb-4">Vision</h2>
-          <p class="mb-3">
-            The vision of Siraj Associates is to be the foremost construction firm, setting the benchmark for excellence by delivering projects of uncompromised quality, exceptional efficiency, and timely completion. We strive to earn the unwavering trust and favorability of all our valued clientele, becoming their preferred partner in construction ventures.
-            By adhering to our vision, we aim to surpass industry standards and establish ourselves as the epitome of reliability, professionalism, and innovation. Through our unwavering commitment to excellence, we seek to transform our clients' dreams into reality, creating enduring structures that inspire and leave a lasting impact.
-          </p>
-          <p class="mb-3">
-            With a focus on continuous improvement, cutting-edge technology, and sustainable practices, we aim to revolutionize the construction industry and exceed the expectations of our clients. Our ultimate goal is to forge long-lasting relationships based on trust, transparency, and a shared vision of success. As we pursue our vision, we remain dedicated to fostering a culture of collaboration, integrity, and respect within our organization. By nurturing our talented team of professionals, we empower them to unleash their potential and deliver projects that reflect our core values. At Siraj Associates, we are driven by a passion for excellence and an unwavering commitment to our clients. Together, we will continue to shape the future of construction, consistently exceeding expectations and leaving a remarkable legacy for generations to come.
-          </p>
+    <section class="section border-t">
+      <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center">
+            <h2 class="text-uppercase heading border-bottom mb-4">Completed Works</h2>
+          </div>
+        </div>
+        <div class="row no-gutters">
+
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>Abad Silver Dew</h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/projects/Abad%20Silver%20Dew%20(2).jpg" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>Abad Ikebana</h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/projects/IKEBANA%20DRON.jpg" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>George Kaitharan </h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/projects/kaitharan.jpg" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>ASSET Versatile</h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/projects/5%20copy.jpg" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>Independent villa project at Vaduthala Alappuzha Dt.</h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/recent/1.JPG" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>
+                Villa project at Maradu comprising 6 Villas
+              </h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/recent/2.png" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>
+                Hospital Building with  O.P, O.T, and furnished rooms.
+                B+G+3FLOORS
+              </h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/recent/3.jpg" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>
+                Residential Villa
+              </h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/recent/5.JPG" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+
+          <div class="col-md-4 element-animate">
+            <a href="projects.html" class="link-thumbnail">
+              <h3>
+                Abad Silver Meadows
+              </h3>
+              <span class="ion-plus icon"></span>
+              <img src="img/recent/6.jpg" alt="Image placeholder" class="img-gallery">
+            </a>
+          </div>
+          <p class="mb-0 mt-1 ml-2"><a href="projects.html" class="btn btn-primary">View More</a></p>
         </div>
       </div>
-      <div class="col-md-6 order-lg-2">
-        <div class="text-block">
-          <h2 class="text-uppercase heading mb-4">Mission</h2>
-          <p class="mb-3">
-            At Siraj Associates, our mission is to deliver superior quality structures to our esteemed customers while upholding the highest standards and regulations. We are dedicated to achieving this mission through efficient coordination, the use of appropriate technology and services, and ensuring thorough satisfaction from our valued clients.
-          </p>
-          <p class="mb-3">
-            Our core values serve as the foundation of our mission, and we hold them in high regard:
-            <ul>
-              <li>Quality Construction: We prioritize delivering construction projects of exceptional quality, ensuring durability, functionality, and aesthetic appeal in every structure we build.</li>
-              <li>Timely Completion: We are committed to completing projects within the agreed-upon timelines, recognizing the importance of meeting our clients' schedules and delivering on our promises.</li>
-              <li>Customer Satisfaction: We place utmost importance on the satisfaction of our clients. By understanding their unique needs and expectations, we strive to exceed their requirements and build lasting relationships based on trust and mutual respect.</li>
-              <li>Technical Excellence: We embrace a culture of technical excellence, continuously enhancing our knowledge and skills to stay at the forefront of industry advancements. Through innovation and expertise, we aim to deliver cutting-edge solutions that surpass our clients' expectations.</li>
-              <li>Adoption of Latest Construction Machinery and Management Techniques: We recognize the importance of incorporating the latest construction machinery and management techniques. By leveraging advanced technology and best practices, we enhance efficiency, productivity, and safety in our construction processes.</li>
-            </ul>
-          </p>
+    </section>
+    <!-- END section -->
+    <section class="section" id="services">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center">
+            <h2 class="text-uppercase heading border-bottom mb-4">Services Offered</h2>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="central-text">
-      <p>Through our unwavering commitment to our mission and core values, we aim to be recognized as a trusted and preferred construction partner. We strive to exceed our clients' expectations, build long-term partnerships, and contribute to the development of sustainable and inspiring structures that positively impact communities. At Siraj Associates, we are dedicated to transforming visions into reality, one exceptional construction project at a time.</p>
-    </div>
-  </div>
-</section>
 
-<section class="border-t">
-  <div class="container">
-    <div class="row justify-content-center mb-5 element-animate">
-      <div class="col-lg-12 mb-5">
-        <div class="text-block">
-          <h2 class="text-uppercase heading border-bottom mb-4" style="text-align: center">Health and Safety Policies</h2>
-          <p class="mb-0 lead">
-            We work towards providing a safe and healthy working environment at its sites and to take adequate steps to prevent accidents & injury to health arising out of the course of work by minimizing as far as possible been reasonably practicable.
-          </p>
-          <h5 style="color: #000; margin-top: 1rem;">We always:</h5>
-          <ul class="mb-0 lead">
-            <li>Comply with all relevant and applicable statutory provisions pertaining to health and safety.</li>
-            <li>Take all measures to prevent accidents and occupational hazards.</li>
-            <li>Provide necessary information, awareness and training to all employees and Contractors to carry out their tasks in safe and responsive manner.</li>
-            <li>Provide and ensure regular use of personal protective equipment.</li>
-            <li>Conduct periodic audit and risk analysis for hazardous operations.</li>
-          </ul>
+        <div class="row mb-5">
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+            <div class="media d-block media-feature text-center">
+              <span class="flaticon-building-1 icon"></span>
+              <div class="media-body">
+                <h3 class="mt-0 text-black">CIVIL CONTRACTING</h3>
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                <p><a href="#" class="btn btn-outline-primary btn-sm">Learn More</a></p>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+            <div class="media d-block media-feature text-center">
+              <span class="flaticon-blueprint icon"></span>
+
+              <div class="media-body">
+                <h3 class="mt-0 text-black">PROJECT MANAGEMENT</h3>
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                <p><a href="#" class="btn btn-outline-primary btn-sm">Learn More</a></p>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+            <div class="media d-block media-feature text-center">
+              <span class="flaticon-crane icon"></span>
+              <div class="media-body">
+                <h3 class="mt-0 text-black">STEEL FABRICATION WORKS
+                </h3>
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                <p><a href="#" class="btn btn-outline-primary btn-sm">Learn More</a></p>-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+            <div class="media d-block media-feature text-center">
+              <span class="flaticon-building icon"></span>
+              <div class="media-body">
+                <h3 class="mt-0 text-black">TURN KEY CONSTRUCTION OF BUILDINGS INCLUDING ALL FINISHING
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+            <div class="media d-block media-feature text-center">
+              <span class="flaticon-helmet icon"></span>
+              <div class="media-body">
+                <h3 class="mt-0 text-black">MEP WORK
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+            <div class="media d-block media-feature text-center">
+              <span class="flaticon-engineer icon"></span>
+              <div class="media-body">
+                <h3 class="mt-0 text-black">SPECIALISED IN BASMENT AND U G TANK WORKS
+                </h3>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <!-- END row -->
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+    <!-- END section -->
 
-<footer id="footerContainer"></footer>
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.timepicker.min.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/main.js"></script>
+<!--    <section class="section bg-light">-->
+<!--      <div class="container">-->
+<!--        <div class="row justify-content-center mb-5 element-animate">-->
+<!--          <div class="col-md-8 text-center mb-5">-->
+<!--            <h2 class="text-uppercase heading border-bottom mb-4">Our News</h2>-->
+<!--            <p class="mb-0 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="row element-animate">-->
+<!--          <div class="major-caousel js-carousel-1 owl-carousel">-->
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_1.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 8</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_2.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 2</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_3.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 5</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_1.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 7</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
 
-</body>
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_2.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 1</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_3.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 4</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_1.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 12</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--              <div class="media d-block media-custom text-left">-->
+<!--                <img src="img/work_thumb_2.jpg" alt="Image Placeholder" class="img-fluid">-->
+<!--                <div class="media-body">-->
+<!--                  <span class="meta-post">December 2, 2017</span>-->
+<!--                  <h3 class="mt-0 text-black"><a href="#" class="text-black">Lorem ipsum dolor sit amet elit</a></h3>-->
+<!--                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                  <p class="clearfix">-->
+<!--                    <a href="#" class="float-left">Read more</a>-->
+<!--                    <a href="#" class="float-right meta-chat"><span class="ion-chatbubble"></span> 14</a>-->
+<!--                  </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--          </div>-->
+<!--          &lt;!&ndash; END slider &ndash;&gt;-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    &lt;!&ndash; END section &ndash;&gt;-->
+<!--    -->
+<!--    <section class="section">-->
+<!--      <div class="container">-->
+<!--        <div class="row justify-content-center mb-5 element-animate">-->
+<!--          <div class="col-md-8 text-center mb-5">-->
+<!--            <h2 class="text-uppercase heading border-bottom mb-4">Happy Customer Says</h2>-->
+<!--            <p class="mb-0 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--        <div class="row">-->
+<!--          <div class="col-md-6 element-animate">-->
+<!--            <div class="media d-block media-testimonial text-center">-->
+<!--              <img src="img/person_1.jpg" alt="Image placeholder" class="img-fluid mb-3">-->
+<!--              <p>Jane Doe, <a href="#">XYZ Inc.</a></p>-->
+<!--              <div class="media-body">-->
+<!--                <blockquote>-->
+<!--                  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.&rdquo;</p>  -->
+<!--                </blockquote>-->
+
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-md-6 element-animate">-->
+<!--            <div class="media d-block media-testimonial text-center">-->
+<!--              <img src="img/person_3.jpg" alt="Image placeholder" class="img-fluid mb-3">-->
+<!--              <p>John Doe, <a href="#">XYZ Inc.</a></p>-->
+<!--              <div class="media-body">-->
+<!--                <blockquote>-->
+<!--                  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.&rdquo;</p>  -->
+<!--                </blockquote>-->
+
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+
+    <!-- END section -->
+  <footer id="footerContainer"></footer>
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
