@@ -1,5 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <title>Siraj Associates</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+      font-family: 'Roboto', sans-serif;
+    }
+    .text-block {
+      font-size: 16px; /* Adjust the font size as needed */
+      line-height: 1.6; /* Adjust the line height as needed */
+    }
+    .central-text {
+      text-align: center;
+      margin: 40px 0; /* Adjust the margin as needed */
+    }
+    .intro-text {
+      text-align: center;
+      margin: 20px 0; /* Adjust the margin as needed */
+      font-style: italic;
+      font-weight: bold;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('header.html')
+        .then(response => response.text())
+        .then(headerHtml => {
+          const headerContainer = document.getElementById('headerContainer');
+          headerContainer.innerHTML = headerHtml;
+        });
+
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(footerHtml => {
+          const footerContainer = document.getElementById('footerContainer');
+          footerContainer.innerHTML = footerHtml;
+        });
+    });
+  </script>
+</head>
+<body>
+
+<header id="headerContainer"></header>
+
+<section class="inner-page">
+  <div class="slider-item py-5" style="background-image: url('img/slider-2.jpg');">
+    <div class="container">
+      <div class="row slider-text align-items-center justify-content-center text-center">
+        <div class="col-md-7 col-sm-12 element-animate">
+          <h1 class="text-white">Sustainable Materials for South Indian Homes: A Guide for Kerala Architects</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
 
      <head>
     <title>Pivot &mdash; Website Template by Colorlib</title>
