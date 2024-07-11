@@ -1,5 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
+     <head>
+    <title>Pivot &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+      // Fetch the header HTML file
+      fetch('header.html')
+              .then(response => response.text())
+              .then(headerHtml => {
+                // Inject the header HTML into the header container
+                const headerContainer = document.getElementById('headerContainer');
+                headerContainer.innerHTML = headerHtml;
+              });
+
+      // Fetch the footer HTML file
+      fetch('footer.html')
+              .then(response => response.text())
+              .then(footerHtml => {
+                // Inject the footer HTML into the footer container
+                const footerContainer = document.getElementById('footerContainer');
+                footerContainer.innerHTML = footerHtml;
+              });
+    </script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
