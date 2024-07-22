@@ -60,6 +60,9 @@
             justify-content: center;
             align-items: center;
         }
+        .modal.active {
+            display: flex;
+        }
         .modal-content {
             position: relative;
             background-color: #fff;
@@ -193,24 +196,24 @@
             img.addEventListener('click', () => {
                 images = Array.from(img.parentElement.querySelectorAll('img'));
                 currentImgIndex = index;
-                modal.style.display = "flex";
+                modal.classList.add("active");
                 modalImg.src = images[currentImgIndex].src;
             });
         });
 
         closeBtn.onclick = function() {
-            modal.style.display = "none";
+            modal.classList.remove("active");
         }
 
         window.onclick = function(event) {
             if (event.target === modal) {
-                modal.style.display = "none";
+                modal.classList.remove("active");
             }
         }
 
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
-                modal.style.display = "none";
+                modal.classList.remove("active");
             } else if (event.key === "ArrowRight") {
                 showNextImage();
             } else if (event.key === "ArrowLeft") {
