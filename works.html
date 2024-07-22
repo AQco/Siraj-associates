@@ -139,14 +139,25 @@
     </div>
 
     <script>
+        // Initial state: all sections collapsed
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.content').forEach(content => {
+                content.style.display = 'none';
+            });
+        });
+
         // Toggle content display
         document.querySelectorAll('.heading').forEach(heading => {
             heading.addEventListener('click', () => {
-                document.querySelectorAll('.content').forEach(content => {
-                    content.style.display = 'none';
-                });
                 const content = heading.nextElementSibling;
-                content.style.display = 'block';
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    document.querySelectorAll('.content').forEach(content => {
+                        content.style.display = 'none';
+                    });
+                    content.style.display = 'block';
+                }
             });
         });
 
