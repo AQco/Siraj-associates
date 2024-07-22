@@ -142,8 +142,11 @@
         // Toggle content display
         document.querySelectorAll('.heading').forEach(heading => {
             heading.addEventListener('click', () => {
+                document.querySelectorAll('.content').forEach(content => {
+                    content.style.display = 'none';
+                });
                 const content = heading.nextElementSibling;
-                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                content.style.display = 'block';
             });
         });
 
