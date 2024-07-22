@@ -146,7 +146,11 @@
                     content.style.display = 'none';
                 });
                 const content = heading.nextElementSibling;
-                content.style.display = 'block';
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                } else {
+                    content.style.display = 'none';
+                }
             });
         });
 
