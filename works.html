@@ -26,20 +26,16 @@
             font-family: 'K2D', sans-serif;
         }
         .content {
-            display: none;
-            padding: 10px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-top: none;
-            border-radius: 0 0 5px 5px;
-            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
             overflow: hidden;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
             max-height: 0;
             opacity: 0;
+            display: flex;
+            flex-direction: column;
         }
         .content.show {
-            display: block;
-            max-height: 1000px;
+            display: flex;
+            max-height: 1000px; /* Adjust this as necessary */
             opacity: 1;
         }
         .images {
@@ -212,8 +208,9 @@
         // Initial state: all sections collapsed
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.content').forEach(content => {
-                content.style.display = 'none';
                 content.classList.remove('show');
+                content.style.maxHeight = '0';
+                content.style.opacity = '0';
             });
         });
 
@@ -225,7 +222,6 @@
                     content.style.maxHeight = '0';
                     content.style.opacity = '0';
                     setTimeout(() => {
-                        content.style.display = 'none';
                         content.classList.remove('show');
                     }, 500);
                 } else {
@@ -233,16 +229,12 @@
                         content.style.maxHeight = '0';
                         content.style.opacity = '0';
                         setTimeout(() => {
-                            content.style.display = 'none';
                             content.classList.remove('show');
                         }, 500);
                     });
-                    content.style.display = 'block';
-                    setTimeout(() => {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        content.style.opacity = '1';
-                        content.classList.add('show');
-                    }, 10);
+                    content.classList.add('show');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    content.style.opacity = '1';
                 }
             });
         });
