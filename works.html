@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Completed Works</title>
     <style>
+        @import url('https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Niramit', sans-serif;
             margin: 20px;
             background-color: #f4f4f4;
         }
@@ -16,11 +18,12 @@
         }
         .heading {
             cursor: pointer;
-            background-color: #007BFF;
+            background-color: #2596be; /* Updated color */
             color: white;
             padding: 10px 20px;
             margin-top: 10px;
             border-radius: 5px;
+            font-family: 'K2D', sans-serif;
         }
         .content {
             display: none;
@@ -29,6 +32,15 @@
             border: 1px solid #ddd;
             border-top: none;
             border-radius: 0 0 5px 5px;
+            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+        }
+        .content.show {
+            display: block;
+            max-height: 1000px;
+            opacity: 1;
         }
         .images {
             display: flex;
@@ -108,8 +120,6 @@
             transform: translateY(-50%);
         }
     </style>
-    <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700" rel="stylesheet">
-
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -145,7 +155,7 @@
     </script>
 </head>
 <body>
-    <header id="headerContainer"></header>
+    <header id="headerContainer" style="background-color: #B0B0B0;"></header> <!-- Updated color -->
     <div class="container">
         <div class="section">
             <div class="heading">High Rise</div>
@@ -203,6 +213,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.content').forEach(content => {
                 content.style.display = 'none';
+                content.classList.remove('show');
             });
         });
 
@@ -210,13 +221,28 @@
         document.querySelectorAll('.heading').forEach(heading => {
             heading.addEventListener('click', () => {
                 const content = heading.nextElementSibling;
-                if (content.style.display === 'block') {
-                    content.style.display = 'none';
+                if (content.classList.contains('show')) {
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                    setTimeout(() => {
+                        content.style.display = 'none';
+                        content.classList.remove('show');
+                    }, 500);
                 } else {
                     document.querySelectorAll('.content').forEach(content => {
-                        content.style.display = 'none';
+                        content.style.maxHeight = '0';
+                        content.style.opacity = '0';
+                        setTimeout(() => {
+                            content.style.display = 'none';
+                            content.classList.remove('show');
+                        }, 500);
                     });
                     content.style.display = 'block';
+                    setTimeout(() => {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.style.opacity = '1';
+                        content.classList.add('show');
+                    }, 10);
                 }
             });
         });
