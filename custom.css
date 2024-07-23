@@ -1,0 +1,87 @@
+/* Import Bumble's font styles */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* Apply font family globally */
+body {
+    font-family: 'Karla', sans-serif;
+}
+
+/* Style for the slider text */
+.slider-item .slider-text h1 {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    color: #000; /* Using Bumble's black color */
+    text-align: center;
+}
+
+/* Style for the buttons */
+.btn-primary.custom-btn {
+    background-color: #FFCD00; /* Bumble's yellow color */
+    border-color: #FFCD00;
+    font-weight: 700;
+    color: #000; /* Bumble's black color */
+}
+
+.btn-primary.custom-btn:hover {
+    background-color: #E6B800; /* Darker yellow for hover effect */
+    border-color: #E6B800;
+    color: #fff; /* White color on hover */
+}
+
+/* Style for the section headings */
+h2.heading {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #000; /* Bumble's black color */
+    text-align: center;
+}
+
+/* Style for the 'About Us' button */
+.btn-primary.custom-btn-2 {
+    background-color: #FFCD00; /* Bumble's yellow color */
+    border-color: #FFCD00;
+    font-weight: 700;
+    color: #000; /* Bumble's black color */
+}
+
+.btn-primary.custom-btn-2:hover {
+    background-color: #E6B800; /* Darker yellow for hover effect */
+    border-color: #E6B800;
+    color: #fff; /* White color on hover */
+}
+
+/* Additional custom styles */
+.section.bg-light {
+    background-color: #f7f7f7;
+    padding: 60px 0;
+}
+
+.section.border-t {
+    border-top: 1px solid #ddd;
+    padding: 60px 0;
+}
+
+.section-cover {
+    padding: 100px 0;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.section-cover:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.section-cover .intro {
+    position: relative;
+    z-index: 2;
+}
