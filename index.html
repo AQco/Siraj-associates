@@ -1,282 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Completed Works</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700');
+    <title>Pivot &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        body {
-            font-family: 'Niramit', sans-serif;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section {
-            margin-bottom: 30px;
-            overflow: hidden;
-        }
-        .thumbnail {
-            display: flex;
-            align-items: center;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            cursor: pointer;
-            overflow: hidden;
-        }
-        .thumbnail:hover {
-            transform: translateY(-5px);
-        }
-        .thumbnail img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px 0 0 10px;
-        }
-        .thumbnail-content {
-            padding: 20px;
-            flex: 1;
-        }
-        .thumbnail-content h3 {
-            margin: 0;
-            font-size: 1.5em;
-            font-family: 'K2D', sans-serif;
-        }
-        .thumbnail-content p {
-            margin: 10px 0 0;
-            font-size: 1em;
-        }
-        .images {
-            display: none;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 20px;
-            background-color: #fff500;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .images img {
-            width: 180px;
-            height: 120px;
-            margin: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-        .images img:hover {
-            transform: scale(1.05);
-        }
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal.active {
-            display: flex;
-        }
-        .modal-content {
-            position: relative;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 90%;
-            max-height: 90%;
-            text-align: center;
-        }
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .close, .prev, .next {
-            position: absolute;
-            top: 50%;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-            user-select: none;
-            padding: 10px;
-            border-radius: 50%;
-            background-color: #343333;
-            transition: background-color 0.3s;
-        }
-        .close {
-            right: 20px;
-            top: 10px;
-        }
-        .close:hover,
-        .close:focus,
-        .prev:hover,
-        .next:hover {
-            background-color: #fff;
-            color: #343333;
-        }
-        .prev {
-            left: 10px;
-            transform: translateY(-50%);
-        }
-        .next {
-            right: 10px;
-            transform: translateY(-50%);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="headerContainer"></header>
-    <div class="container">
-        <div class="section">
-            <div class="thumbnail" onclick="toggleImages(this)">
-                <img src="img/projects/2 copy.jpg" alt="High Rise Thumbnail">
-                <div class="thumbnail-content">
-                    <h3>High Rise</h3>
-                    <p>View high rise building projects.</p>
-                </div>
-            </div>
-            <div class="content images">
-                <img src="img/projects/2 copy.jpg" alt="High Rise 1">
-                <img src="img/projects/2 copy.jpg" alt="High Rise 2">
-                <img src="img/projects/2 copy.jpg" alt="High Rise 3">
-                <img src="img/projects/2 copy.jpg" alt="High Rise 4">
-            </div>
-        </div>
-        <div class="section">
-            <div class="thumbnail" onclick="toggleImages(this)">
-                <img src="img/projects/2 copy.jpg" alt="Schools Thumbnail">
-                <div class="thumbnail-content">
-                    <h3>Schools</h3>
-                    <p>View school building projects.</p>
-                </div>
-            </div>
-            <div class="content images">
-                <img src="img/projects/2 copy.jpg" alt="School 1">
-                <img src="img/projects/2 copy.jpg" alt="School 2">
-                <img src="img/projects/2 copy.jpg" alt="School 3">
-                <img src="img/projects/2 copy.jpg" alt="School 4">
-            </div>
-        </div>
-        <div class="section">
-            <div class="thumbnail" onclick="toggleImages(this)">
-                <img src="img/projects/2 copy.jpg" alt="Hospitals Thumbnail">
-                <div class="thumbnail-content">
-                    <h3>Hospitals</h3>
-                    <p>View hospital building projects.</p>
-                </div>
-            </div>
-            <div class="content images">
-                <img src="img/projects/2 copy.jpg" alt="Hospital 1">
-                <img src="img/projects/2 copy.jpg" alt="Hospital 2">
-                <img src="img/projects/2 copy.jpg" alt="Hospital 3">
-                <img src="img/projects/2 copy.jpg" alt="Hospital 4">
-            </div>
-        </div>
-        <div class="section">
-            <div class="thumbnail" onclick="toggleImages(this)">
-                <img src="img/projects/2 copy.jpg" alt="Steel Fabrication Thumbnail">
-                <div class="thumbnail-content">
-                    <h3>Steel Fabrication</h3>
-                    <p>View steel fabrication projects.</p>
-                </div>
-            </div>
-            <div class="content images">
-                <img src="img/projects/2 copy.jpg" alt="Steel Fabrication 1">
-                <img src="img/projects/2 copy.jpg" alt="Steel Fabrication 2">
-                <img src="img/projects/2 copy.jpg" alt="Steel Fabrication 3">
-                <img src="img/projects/2 copy.jpg" alt="Steel Fabrication 4">
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <span class="close">&times;</span>
-        <span class="prev">&#10094;</span>
-        <span class="next">&#10095;</span>
-        <div class="modal-content">
-            <img id="modal-img" src="" alt="Modal Image">
-        </div>
-    </div>
-
     <script>
-        let currentImgIndex = 0;
-        let images = [];
-
-        function toggleImages(thumbnail) {
-            const content = thumbnail.nextElementSibling;
-            if (content.style.display === "flex") {
-                content.style.display = "none";
-            } else {
-                document.querySelectorAll('.content.images').forEach(content => {
-                    content.style.display = 'none';
+        document.addEventListener("DOMContentLoaded", function () {
+            // Fetch the header HTML file
+            fetch('header.html')
+                .then(response => response.text())
+                .then(headerHtml => {
+                    // Inject the header HTML into the header container
+                    const headerContainer = document.getElementById('headerContainer');
+                    headerContainer.innerHTML = headerHtml;
                 });
-                content.style.display = "flex";
-            }
-        }
 
-        // Modal functionality
-        const modal = document.getElementById("myModal");
-        const modalImg = document.getElementById("modal-img");
-        const closeBtn = document.getElementsByClassName("close")[0];
-        const prevBtn = document.getElementsByClassName("prev")[0];
-        const nextBtn = document.getElementsByClassName("next")[0];
-
-        document.querySelectorAll('.images img').forEach((img, index) => {
-            img.addEventListener('click', () => {
-                images = Array.from(img.parentElement.querySelectorAll('img'));
-                currentImgIndex = index;
-                modal.classList.add("active");
-                modalImg.src = images[currentImgIndex].src;
-            });
+            // Fetch the footer HTML file
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(footerHtml => {
+                    // Inject the footer HTML into the footer container
+                    const footerContainer = document.getElementById('footerContainer');
+                    footerContainer.innerHTML = footerHtml;
+                });
         });
-
-        closeBtn.onclick = function() {
-            modal.classList.remove("active");
-        }
-
-        window.onclick = function(event) {
-            if (event.target === modal) {
-                modal.classList.remove("active");
-            }
-        }
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                modal.classList.remove("active");
-            } else if (event.key === "ArrowRight") {
-                showNextImage();
-            } else if (event.key === "ArrowLeft") {
-                showPrevImage();
-            }
-        });
-
-        nextBtn.onclick = showNextImage;
-        prevBtn.onclick = showPrevImage;
-
-        function showNextImage() {
-            currentImgIndex = (currentImgIndex + 1) % images.length;
-            modalImg.src = images[currentImgIndex].src;
-        }
-
-        function showPrevImage() {
-            currentImgIndex = (currentImgIndex - 1 + images.length) % images.length;
-            modalImg.src = images[currentImgIndex].src;
-        }
     </script>
+
+    <header id="headerContainer"></header>
+    <section class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url('img/slider-4.jpg');">
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center text-center">
+                    <div class="col-md-7 col-sm-12 element-animate">
+                        <h1 class="mb-4">Building Dreams, Brick By Brick</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url('img/slider-3.jpg');">
+            <div class="container">
+                <div class="row slider-text align-items-center justify-content-center text-center">
+                    <div class="col-md-8 col-sm-12 element-animate">
+                        <h1 class="mb-4">Home for all your construction needs</h1>
+                        <p class="mb-0"><a href="#" target="_blank" class="btn btn-primary">Get Started</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END slider -->
+
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 pr-lg-5 mb-5 mb-md-0 element-animate">
+                    <div class="pr-lg-5">
+                        <h2 class="text-uppercase heading border-bottom mb-4 text-left">About Us</h2>
+                        <p>We are a construction and contracting firm from Cochin. We strive to provide the highest quality service with a commitment to safety and customer satisfaction. Our commitment to excellence shines through our comprehensive range of services:</p>
+                        <ul>
+                            <li>Residential building construction</li>
+                            <li>Civil construction</li>
+                            <li>Technical consultancy</li>
+                            <li>Project management</li>
+                            <li>Interior and landscaping</li>
+                        </ul>
+                        <p class="mb-0"><a href="about.html" class="btn btn-primary">Read More</a></p>
+                    </div>
+                </div>
+                <div class="col-md-6 element-animate">
+                    <img src="img/1.jpg" alt="About Us Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section border-t">
+        <div class="container">
+            <div class="row justify-content-center mb-5 element-animate">
+                <div class="col-md-8 text-center">
+                    <h2 class="text-uppercase heading border-bottom mb-4">Completed Works</h2>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>Abad Silver Dew</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/projects/Abad%20Silver%20Dew%20(2).jpg" alt="Abad Silver Dew" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>Abad Ikebana</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/projects/IKEBANA%20DRON.jpg" alt="Abad Ikebana" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>George Kaitharan</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/projects/kaitharan.jpg" alt="George Kaitharan" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>ASSET Versatile</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/projects/5%20copy.jpg" alt="ASSET Versatile" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>Independent villa project at Vaduthala Alappuzha Dt.</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/recent/1.JPG" alt="Independent villa project" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>Villa project at Maradu comprising 6 Villas</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/recent/2.png" alt="Villa project at Maradu" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>Hospital Building with O.P, O.T, and furnished rooms. B+G+3FLOORS</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/recent/3.jpg" alt="Hospital Building" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>Residential Villa</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/recent/5.JPG" alt="Residential Villa" class="img-gallery">
+                    </a>
+                </div>
+
+                <div class="col-md-4 element-animate">
+                    <a href="projects.html" class="link-thumbnail">
+                        <h3>Abad Silver Meadows</h3>
+                        <span class="ion-plus icon"></span>
+                        <img src="img/recent/6.jpg" alt="Abad Silver Meadows" class="img-gallery">
+                    </a>
+                </div>
+
+                <p class="mb-0 mt-1 ml-2"><a href="projects.html" class="btn btn-primary">View More</a></p>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <section class="section" id="services">
+        <div class="container">
+            <div class="row justify-content-center mb-5 element-animate">
+                <div class="col-md-8 text-center">
+                    <h2 class="text-uppercase heading border-bottom mb-4">Services Offered</h2>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                    <div class="media d-block media-feature text-center">
+                        <style>
+                            .icon-img {
+                                width: 50px; /* Adjust this value to your desired size */
+                                height: 50px; /* Adjust this value to your desired size */
+                                /* Optional styles for alignment and margin */
+                                display: inline-block;
+                                margin-bottom: 10px; /* Adjust as needed */
+                            }
+                        </style>
+                        <img src='img/house.png' alt="Residential buildings" class="icon-img">
+                        <div class="media-body">
+                            <h3 class="mt-0 text-black">Residential buildings</h3>
+                            <p>Siraj Associates is dedicated to delivering your dream homes within your budget in the highest-quality under experienced supervision of our engineers and specially skilled labour force.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                    <div class="media d-block media-feature text-center">
+                        <img src='img/commercial.png' alt="Commercial construction projects" class="icon-img">
+                        <div class="media-body">
+                            <h3 class="mt-0 text-black">Commercial Buildings</h3>
+                            <p>We build state-of-the-art commercial buildings that meet your business needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                    <div class="media d-block media-feature text-center">
+                        <img src='img/pmo.png' alt="Project Management" class="icon-img">
+                        <div class="media-body">
+                            <h3 class="mt-0 text-black">Project Management</h3>
+                            <p>Our project management services ensure your projects are completed on time and within budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                    <div class="media d-block media-feature text-center">
+                        <img src='img/renovation.png' alt="Renovation" class="icon-img">
+                        <div class="media-body">
+                            <h3 class="mt-0 text-black">Renovation</h3>
+                            <p>We provide renovation services to upgrade and improve existing structures.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                    <div class="media d-block media-feature text-center">
+                        <img src='img/consulting.png' alt="Consulting" class="icon-img">
+                        <div class="media-body">
+                            <h3 class="mt-0 text-black">Consulting</h3>
+                            <p>Our consulting services help you make informed decisions about your construction projects.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                    <div class="media d-block media-feature text-center">
+                        <img src='img/workers.png' alt="Specialized in Basement and UGT Tank Works" class="icon-img">
+                        <div class="media-body">
+                            <h3 class="mt-0 text-black">SPECIALISED IN BASEMENT AND U G TANK WORKS</h3>
+                            <p>We offer interior design and landscaping services to beautify your spaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END section -->
+
+    <footer id="footerContainer"></footer>
+
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#51be78"/></svg></div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
