@@ -11,41 +11,52 @@
             font-family: 'Niramit', sans-serif;
             margin: 20px;
             background-color: #f4f4f4;
+            color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
         }
-        .heading {
+        .section {
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        .thumbnail {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
             cursor: pointer;
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            margin-top: 10px;
-            border-radius: 5px;
+            overflow: hidden;
+        }
+        .thumbnail:hover {
+            transform: translateY(-5px);
+        }
+        .thumbnail img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 0 0 10px;
+        }
+        .thumbnail-content {
+            padding: 20px;
+        }
+        .thumbnail-content h3 {
+            margin: 0;
+            font-size: 1.5em;
             font-family: 'K2D', sans-serif;
         }
-        .content {
-            display: none;
-            padding: 10px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-top: none;
-            border-radius: 0 0 5px 5px;
-            transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-            overflow: hidden;
-            max-height: 0;
-            opacity: 0;
-        }
-        .content.show {
-            display: block;
-            max-height: 1000px;
-            opacity: 1;
+        .thumbnail-content p {
+            margin: 10px 0 0;
+            font-size: 1em;
         }
         .images {
-            display: flex;
+            display: none;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-top: 20px;
         }
         .images img {
             width: 180px;
@@ -120,45 +131,18 @@
             transform: translateY(-50%);
         }
     </style>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <script>
-      // Fetch the header HTML file
-      fetch('header.html')
-              .then(response => response.text())
-              .then(headerHtml => {
-                // Inject the header HTML into the header container
-                const headerContainer = document.getElementById('headerContainer');
-                headerContainer.innerHTML = headerHtml;
-              });
-
-      // Fetch the footer HTML file
-      fetch('footer.html')
-              .then(response => response.text())
-              .then(footerHtml => {
-                // Inject the footer HTML into the footer container
-                const footerContainer = document.getElementById('footerContainer');
-                footerContainer.innerHTML = footerHtml;
-              });
-    </script>
 </head>
 <body>
     <header id="headerContainer"></header>
     <div class="container">
         <div class="section">
-            <div class="heading">High Rise</div>
+            <div class="thumbnail" onclick="toggleImages(this)">
+                <img src="img/projects/2 copy.jpg" alt="High Rise Thumbnail">
+                <div class="thumbnail-content">
+                    <h3>High Rise</h3>
+                    <p>View high rise building projects.</p>
+                </div>
+            </div>
             <div class="content images">
                 <img src="img/projects/2 copy.jpg" alt="High Rise 1">
                 <img src="img/projects/2 copy.jpg" alt="High Rise 2">
@@ -167,7 +151,13 @@
             </div>
         </div>
         <div class="section">
-            <div class="heading">Schools</div>
+            <div class="thumbnail" onclick="toggleImages(this)">
+                <img src="img/projects/2 copy.jpg" alt="Schools Thumbnail">
+                <div class="thumbnail-content">
+                    <h3>Schools</h3>
+                    <p>View school building projects.</p>
+                </div>
+            </div>
             <div class="content images">
                 <img src="img/projects/2 copy.jpg" alt="School 1">
                 <img src="img/projects/2 copy.jpg" alt="School 2">
@@ -176,7 +166,13 @@
             </div>
         </div>
         <div class="section">
-            <div class="heading">Hospitals</div>
+            <div class="thumbnail" onclick="toggleImages(this)">
+                <img src="img/projects/2 copy.jpg" alt="Hospitals Thumbnail">
+                <div class="thumbnail-content">
+                    <h3>Hospitals</h3>
+                    <p>View hospital building projects.</p>
+                </div>
+            </div>
             <div class="content images">
                 <img src="img/projects/2 copy.jpg" alt="Hospital 1">
                 <img src="img/projects/2 copy.jpg" alt="Hospital 2">
@@ -185,7 +181,13 @@
             </div>
         </div>
         <div class="section">
-            <div class="heading">Steel Fabrication</div>
+            <div class="thumbnail" onclick="toggleImages(this)">
+                <img src="img/projects/2 copy.jpg" alt="Steel Fabrication Thumbnail">
+                <div class="thumbnail-content">
+                    <h3>Steel Fabrication</h3>
+                    <p>View steel fabrication projects.</p>
+                </div>
+            </div>
             <div class="content images">
                 <img src="img/projects/2 copy.jpg" alt="Steel Fabrication 1">
                 <img src="img/projects/2 copy.jpg" alt="Steel Fabrication 2">
@@ -209,43 +211,17 @@
         let currentImgIndex = 0;
         let images = [];
 
-        // Initial state: all sections collapsed
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.content').forEach(content => {
-                content.style.display = 'none';
-                content.classList.remove('show');
-            });
-        });
-
-        // Toggle content display
-        document.querySelectorAll('.heading').forEach(heading => {
-            heading.addEventListener('click', () => {
-                const content = heading.nextElementSibling;
-                if (content.classList.contains('show')) {
-                    content.style.maxHeight = '0';
-                    content.style.opacity = '0';
-                    setTimeout(() => {
-                        content.style.display = 'none';
-                        content.classList.remove('show');
-                    }, 500);
-                } else {
-                    document.querySelectorAll('.content').forEach(content => {
-                        content.style.maxHeight = '0';
-                        content.style.opacity = '0';
-                        setTimeout(() => {
-                            content.style.display = 'none';
-                            content.classList.remove('show');
-                        }, 500);
-                    });
-                    content.style.display = 'block';
-                    setTimeout(() => {
-                        content.style.maxHeight = content.scrollHeight + 'px';
-                        content.style.opacity = '1';
-                        content.classList.add('show');
-                    }, 10);
-                }
-            });
-        });
+        function toggleImages(thumbnail) {
+            const content = thumbnail.nextElementSibling;
+            if (content.style.display === "flex") {
+                content.style.display = "none";
+            } else {
+                document.querySelectorAll('.content.images').forEach(content => {
+                    content.style.display = 'none';
+                });
+                content.style.display = "flex";
+            }
+        }
 
         // Modal functionality
         const modal = document.getElementById("myModal");
@@ -296,6 +272,5 @@
             modalImg.src = images[currentImgIndex].src;
         }
     </script>
-    <footer id="footerContainer"></footer>
 </body>
 </html>
