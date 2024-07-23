@@ -1,151 +1,284 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Siraj Associates</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Siraj Associates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="css/jquery.timepicker.css">
-  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
-  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=K2D:400,700|Niramit:300,700" rel="stylesheet">
 
-  <style>
-    body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
-      font-family: 'Roboto', sans-serif;
-    }
-    .text-block {
-      font-size: 16px; /* Adjust the font size as needed */
-      line-height: 1.6; /* Adjust the line height as needed */
-    }
-    .central-text {
-      text-align: center;
-      margin: 40px 0; /* Adjust the margin as needed */
-    }
-    .intro-text {
-      text-align: center;
-      margin: 20px 0; /* Adjust the margin as needed */
-      font-style: italic;
-      font-weight: bold;
-    }
-  </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      fetch('header.html')
-        .then(response => response.text())
-        .then(headerHtml => {
-          const headerContainer = document.getElementById('headerContainer');
-          headerContainer.innerHTML = headerHtml;
-        });
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
 
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(footerHtml => {
-          const footerContainer = document.getElementById('footerContainer');
-          footerContainer.innerHTML = footerHtml;
-        });
-    });
-  </script>
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script>
+        // Fetch the header HTML file
+        fetch('header.html')
+            .then(response => response.text())
+            .then(headerHtml => {
+                // Inject the header HTML into the header container
+                const headerContainer = document.getElementById('headerContainer');
+                headerContainer.innerHTML = headerHtml;
+            });
+
+        // Fetch the footer HTML file
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(footerHtml => {
+                // Inject the footer HTML into the footer container
+                const footerContainer = document.getElementById('footerContainer');
+                footerContainer.innerHTML = footerHtml;
+            });
+    </script>
 </head>
 <body>
-
 <header id="headerContainer"></header>
 
-<section class="inner-page">
-  <div class="slider-item py-5" style="background-image: url('img/slider-2.jpg');">
+<section class="home-slider owl-carousel">
+    <div class="slider-item" style="background-image: url('img/slider-4.jpg');">
+
+        <div class="container">
+            <div class="row slider-text align-items-center justify-content-center text-center">
+                <div class="col-md-7 col-sm-12 element-animate">
+                    <h1 class="mb-4">Building Dreams, Brick By Brick</h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="slider-item" style="background-image: url('img/slider-3.jpg');">
+        <div class="container">
+            <div class="row slider-text align-items-center justify-content-center text-center">
+                <div class="col-md-8 col-sm-12 element-animate">
+                    <h1 class="mb-4">Home for all your construction needs</h1>
+                    <p class="mb-0"><a href="about.html" class="btn btn-primary custom-btn">About Us</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<!-- END slider -->
+
+<section class="section bg-light">
     <div class="container">
-      <div class="row slider-text align-items-center justify-content-center text-center">
-        <div class="col-md-7 col-sm-12 element-animate">
-          <h1 class="text-white">Sustainable Materials for South Indian Homes: A Guide for Kerala Architects</h1>
+        <div class="row align-items-center">
+            <div class="col-md-6 pr-lg-5 mb-5 mb-md-0 element-animate">
+                <div class="pr-lg-5">
+                    <h2 class="text-uppercase heading border-bottom mb-4 text-left">About Us</h2>
+                    <p>We are a construction and contracting firm from Cochin. We strive to provide the highest quality service with a commitment to safety and customer satisfaction. Our commitment to excellence shines through our comprehensive range of services:</p>
+                    <ul>
+                        <li>Residential building construction</li>
+                        <li>Civil construction</li>
+                        <li>Technical consultancy</li>
+                        <li>Project management</li>
+                        <li>Interior and landscaping</li>
+                    </ul>
+                    <p class="mb-0"><a href="about.html" class="btn btn-primary custom-btn">Read More</a></p>
+                </div>
+            </div>
+            <div class="col-md-6 element-animate">
+                <img src="img/1.jpg" alt="" class="img-fluid">
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="intro-text">
-      <p>We are a construction and contracting firm based in Kochi. We deliver services and solutions in civil construction, technical consultancy, project management, and interior & landscaping.</p>
-    </div>
-    <div class="row mb-5">
-      <div class="col-md-6 order-lg-1">
-        <div class="text-block">
-          <h2 class="text-uppercase heading mb-4">Vision</h2>
-          <p class="mb-3">
-            The vision of Siraj Associates is to be the foremost construction firm, setting the benchmark for excellence by delivering projects of uncompromised quality, exceptional efficiency, and timely completion. We strive to earn the unwavering trust and favorability of all our valued clientele, becoming their preferred partner in construction ventures.
-            By adhering to our vision, we aim to surpass industry standards and establish ourselves as the epitome of reliability, professionalism, and innovation. Through our unwavering commitment to excellence, we seek to transform our clients' dreams into reality, creating enduring structures that inspire and leave a lasting impact.
-          </p>
-          <p class="mb-3">
-            With a focus on continuous improvement, cutting-edge technology, and sustainable practices, we aim to revolutionize the construction industry and exceed the expectations of our clients. Our ultimate goal is to forge long-lasting relationships based on trust, transparency, and a shared vision of success. As we pursue our vision, we remain dedicated to fostering a culture of collaboration, integrity, and respect within our organization. By nurturing our talented team of professionals, we empower them to unleash their potential and deliver projects that reflect our core values. At Siraj Associates, we are driven by a passion for excellence and an unwavering commitment to our clients. Together, we will continue to shape the future of construction, consistently exceeding expectations and leaving a remarkable legacy for generations to come.
-          </p>
+<section class="section border-t">
+    <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-8 text-center">
+                <h2 class="text-uppercase heading border-bottom mb-4">Completed Works</h2>
+            </div>
         </div>
-      </div>
-      <div class="col-md-6 order-lg-2">
-        <div class="text-block">
-          <h2 class="text-uppercase heading mb-4">Mission</h2>
-          <p class="mb-3">
-            At Siraj Associates, our mission is to deliver superior quality structures to our esteemed customers while upholding the highest standards and regulations. We are dedicated to achieving this mission through efficient coordination, the use of appropriate technology and services, and ensuring thorough satisfaction from our valued clients.
-          </p>
-          <p class="mb-3">
-            Our core values serve as the foundation of our mission, and we hold them in high regard:
-            <ul>
-              <li>Quality Construction: We prioritize delivering construction projects of exceptional quality, ensuring durability, functionality, and aesthetic appeal in every structure we build.</li>
-              <li>Timely Completion: We are committed to completing projects within the agreed-upon timelines, recognizing the importance of meeting our clients' schedules and delivering on our promises.</li>
-              <li>Customer Satisfaction: We place utmost importance on the satisfaction of our clients. By understanding their unique needs and expectations, we strive to exceed their requirements and build lasting relationships based on trust and mutual respect.</li>
-              <li>Technical Excellence: We embrace a culture of technical excellence, continuously enhancing our knowledge and skills to stay at the forefront of industry advancements. Through innovation and expertise, we aim to deliver cutting-edge solutions that surpass our clients' expectations.</li>
-              <li>Adoption of Latest Construction Machinery and Management Techniques: We recognize the importance of incorporating the latest construction machinery and management techniques. By leveraging advanced technology and best practices, we enhance efficiency, productivity, and safety in our construction processes.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="central-text">
-      <p>Through our unwavering commitment to our mission and core values, we aim to be recognized as a trusted and preferred construction partner. We strive to exceed our clients' expectations, build long-term partnerships, and contribute to the development of sustainable and inspiring structures that positively impact communities. At Siraj Associates, we are dedicated to transforming visions into reality, one exceptional construction project at a time.</p>
-    </div>
-  </div>
-</section>
+        <div class="row no-gutters">
 
-<section class="border-t">
-  <div class="container">
-    <div class="row justify-content-center mb-5 element-animate">
-      <div class="col-lg-12 mb-5">
-        <div class="text-block">
-          <h2 class="text-uppercase heading border-bottom mb-4" style="text-align: center">Health and Safety Policies</h2>
-          <p class="mb-0 lead">
-            We work towards providing a safe and healthy working environment at its sites and to take adequate steps to prevent accidents & injury to health arising out of the course of work by minimizing as far as possible been reasonably practicable.
-          </p>
-          <h5 style="color: #000; margin-top: 1rem;">We always:</h5>
-          <ul class="mb-0 lead">
-            <li>Comply with all relevant and applicable statutory provisions pertaining to health and safety.</li>
-            <li>Take all measures to prevent accidents and occupational hazards.</li>
-            <li>Provide necessary information, awareness and training to all employees and Contractors to carry out their tasks in safe and responsive manner.</li>
-            <li>Provide and ensure regular use of personal protective equipment.</li>
-            <li>Conduct periodic audit and risk analysis for hazardous operations.</li>
-          </ul>
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>Abad Silver Dew</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/projects/Abad%20Silver%20Dew%20(2).jpg" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>Abad Ikebana</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/projects/IKEBANA%20DRON.jpg" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>George Kaitharan </h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/projects/kaitharan.jpg" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>ASSET Versatile</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/projects/5%20copy.jpg" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>Independent villa project at Vaduthala Alappuzha Dt.</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/recent/1.JPG" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>Villa project at Maradu comprising 6 Villas</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/recent/2.png" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>Hospital Building with O.P, O.T, and furnished rooms. B+G+3FLOORS</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/recent/3.jpg" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>Residential Villa</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/recent/5.JPG" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+
+            <div class="col-md-4 element-animate">
+                <a href="projects.html" class="link-thumbnail">
+                    <h3>Abad Silver Meadows</h3>
+                    <span class="ion-plus icon"></span>
+                    <img src="img/recent/6.jpg" alt="Image placeholder" class="img-gallery">
+                </a>
+            </div>
+            <p class="mb-0 mt-1 ml-2"><a href="projects.html" class="btn btn-primary custom-btn">View More</a></p>
         </div>
-      </div>
     </div>
-  </div>
+</section>
+<!-- END section -->
+<section class="section" id="services">
+    <div class="container">
+
+        <div class="row justify-content-center mb-5 element-animate">
+            <div class="col-md-8 text-center">
+                <h2 class="text-uppercase heading border-bottom mb-4">Services Offered</h2>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                <div class="media d-block media-feature text-center">
+                    <style>
+                        .icon-img {
+                            width: 50px; /* Adjust this value to your desired size */
+                            height: 50px; /* Adjust this value to your desired size */
+                            /* Optional styles for alignment and margin */
+                            display: inline-block;
+                            margin-bottom: 10px; /* Adjust as needed */
+                        }
+                    </style>
+                    <img src='img/house.png' class='icon-img'>
+                    <div class="media-body">
+                        <h3 class="mt-0 text-black">Residential Building Construction</h3>
+                        <p>Our team of skilled professionals excels in creating beautiful and functional residential buildings. We offer end-to-end construction services, from foundation to finishing touches.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                <div class="media d-block media-feature text-center">
+                    <img src='img/helmet.png' class='icon-img'>
+                    <div class="media-body">
+                        <h3 class="mt-0 text-black">Civil Construction</h3>
+                        <p>We specialize in a wide range of civil construction projects, including roads, bridges, and other infrastructure developments. Our expertise ensures quality and safety in every project.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                <div class="media d-block media-feature text-center">
+                    <img src='img/architecture.png' class='icon-img'>
+                    <div class="media-body">
+                        <h3 class="mt-0 text-black">Technical Consultancy</h3>
+                        <p>Our experienced consultants provide technical expertise and advice to guide your construction projects to success. We offer valuable insights and solutions to ensure optimal outcomes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                <div class="media d-block media-feature text-center">
+                    <img src='img/project-management.png' class='icon-img'>
+                    <div class="media-body">
+                        <h3 class="mt-0 text-black">Project Management</h3>
+                        <p>We offer comprehensive project management services to keep your construction projects on track, on time, and within budget. Our team ensures efficient coordination and execution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-3 element-animate">
+                <div class="media d-block media-feature text-center">
+                    <img src='img/interior-design.png' class='icon-img'>
+                    <div class="media-body">
+                        <h3 class="mt-0 text-black">Interior & Landscaping</h3>
+                        <p>We create stunning interior designs and landscaping solutions that elevate the aesthetic appeal of your spaces. Our team brings creativity and functionality together to transform your vision into reality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- END section -->
+
+<section class="section-cover" data-stellar-background-ratio="0.5"
+         style="background-image: url('img/slider-2.jpg');">
+    <div class="container">
+        <div class="row justify-content-center align-items-center intro">
+            <div class="col-md-8 text-center element-animate">
+                <h2 class="text-white">Your Dream Home Awaits</h2>
+                <p class="lead mb-5 text-white">Ready to turn your construction dreams into reality? Contact us today to
+                    get started!</p>
+                <div class="btn-play-wrap">
+                    <a href="contact.html" class="btn btn-primary custom-btn-2">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer id="footerContainer"></footer>
 
 <script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-migrate-3.0.0.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/owl.carousel.min.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/jquery.timepicker.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
-<script src="js/main.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
 
+<script src="js/main.js"></script>
 </body>
 </html>
