@@ -94,9 +94,12 @@
             max-width: 90%;
             max-height: 90%;
             text-align: center;
+            overflow: hidden;
         }
         .modal-content img {
-            width: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
             height: auto;
             border-radius: 10px;
         }
@@ -237,6 +240,10 @@
                 modal.classList.add("active");
                 modalImg.src = images[currentImgIndex].src;
             });
+            // Handle broken image
+            img.onerror = function() {
+                img.src = 'path/to/placeholder-image.jpg'; // Replace with your placeholder image path
+            };
         });
 
         closeBtn.onclick = function() {
